@@ -81,5 +81,5 @@ files_in_dir2 = [f[:-4] for f in files_in_dir2]
 for file_name in files_in_dir1:
     if file_name[:-4] not in files_in_dir2:
         file_path = os.path.join(directory1, file_name)
-        process_files(file_path, directory2, script_dir)
+        process_files(file_path, directory2 + "/" + file_name[:-4] + ".md", script_dir)
         print(f"Converted {file_name} to markdown")
